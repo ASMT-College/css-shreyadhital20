@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid black;
+            min-height: 400px;
+        }
+        .header, .nav {
+            padding: 15px;
+            border-bottom: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+        }
+        .main {
+            display: flex;
+            flex: 1; 
+            border-top: 1px solid black;
+        }
+        .section {
+            flex: 2;
+            padding: 15px;
+            border-right: 1px solid black;
+            text-align: left;
+            font-weight: bold;
+        }
+        .sidebar {
+            flex: 1;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        .footer {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            background: white;
+            border-top: 1px solid black;
+        }
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column-reverse; 
+            }
+            .section {
+                border-right: none; 
+                border-top: 1px solid black;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="nav">Nav</div>
+        <div class="main">
+            <div class="section">Main </div>
+            <div class="sidebar">Sidebar</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

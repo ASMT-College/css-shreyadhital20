@@ -1,0 +1,34 @@
+.flex-container {
+    display: flex;  
+    gap: 10px;      
+    padding: 20px;
+    background-color: #f3f3f3;
+    flex-wrap: wrap; /* Allows wrapping to the next row */
+}
+
+.box {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    flex-grow: 1;  /* Default: All boxes grow equally */
+}
+
+/* Increase Box 3 size */
+.box:nth-child(3) {
+    flex-grow: 8;  /* Box 3 will take 8x more space */
+}
+
+/* Responsive Design for Mobile (Width < 600px) */
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column; /* Stack items in a single column */
+    }
+}
+
+
+
+    
+
+
